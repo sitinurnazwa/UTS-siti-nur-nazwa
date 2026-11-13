@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Profil</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background-color: #fff; border-bottom: 1px solid #ddd; }
+        .logo-area { display: flex; align-items: center; gap: 10px; }
+        .logo-box { width: 30px; height: 30px; border: 1px solid #333; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        nav a { margin-left: 15px; text-decoration: none; color: #333; font-size: 14px; }
+        nav a:hover { text-decoration: underline; }
+        main { max-width: 650px; margin: 40px auto; background: #fff; padding: 30px; border: 1px solid #ccc; border-radius: 4px; text-align: center; }
+        
+        /* CSS Tabel Profil Persis Seperti di Foto */
+        .tabel-profil {
+            width: 100%;
+            border-collapse: collapse; /* Menyatukan garis ganda tabel */
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .tabel-profil th, .tabel-profil td {
+            border: 1px solid #888888; /* Garis kotak abu-abu */
+            padding: 10px 12px;
+            text-align: left;
+        }
+        .tabel-profil th {
+            width: 35%;
+            background-color: #f4f4f4; /* Warna latar belakang kolom kiri */
+            font-weight: bold;
+        }
+        .tabel-profil td {
+            width: 65%;
+            background-color: #ffffff;
+        }
+
+        .btn { padding: 6px 20px; background-color: #f0f0f0; border: 1px solid #888; border-radius: 3px; cursor: pointer; text-decoration: none; color: #333; font-size: 14px; }
+        .btn:hover { background-color: #e0e0e0; }
+        footer { display: flex; justify-content: space-between; padding: 15px 30px; background-color: #fff; border-top: 1px solid #ddd; font-size: 12px; position: fixed; bottom: 0; width: 100%; box-sizing: border-box; }
+        .footer-links { display: flex; gap: 15px; }
+        .footer-links a { text-decoration: none; color: #333; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <div class="logo-box">X</div>
+            <span>Nama Website</span>
+        </div>
+        <nav>
+            <a href="profil.html">Profil</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <h3>Profil Mahasiswa</h3>
+        
+        <table class="tabel-profil">
+            <tr>
+                <th>NIM</th>
+                <td>2557401013</td>
+            </tr>
+            <tr>
+                <th>Nama Lengkap</th>
+                <td>Siti Nur Nazwa</td>
+            </tr>
+            <tr>
+                <th>Jurusan</th>
+                <td>Manajemen Informatika</td>
+            </tr>
+            <tr>
+                <th>Jenis Kelamin</th>
+                <td>Perempuan</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>nurnazwasiti03@email.com</td>
+            </tr>
+            <tr>
+                <th>Nomor Handphone</th>
+                <td>089535857547</td>
+            </tr>
+            <tr>
+                <th>Alamat (Kota, Kecamatan)</th>
+                <td>Kab.Serang , Bojonegara</td>
+            </tr>
+        </table>
+
+        <div style="margin-top: 20px; text-align: left;">
+            <a href="index.html" class="btn">Logout</a>
+        </div>
+    </main>
+
+    <footer>
+        <div>&copy; 2026 Siti Nur Nazwa - 2557401013 - Kelas MI 25</div>
+        <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">Email</a>
+        </div>
+    </footer>
+
+</body>
+</html>
