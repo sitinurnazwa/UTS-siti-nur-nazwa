@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Daftar</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background-color: #fff; border-bottom: 1px solid #ddd; }
+        .logo-area { display: flex; align-items: center; gap: 10px; }
+        .logo-box { width: 30px; height: 30px; border: 1px solid #333; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        nav a { margin-left: 15px; text-decoration: none; color: #333; font-size: 14px; }
+        nav a:hover { text-decoration: underline; }
+        
+        main { max-width: 650px; margin: 30px auto 80px auto; background: #fff; padding: 30px; border: 1px solid #ccc; border-radius: 4px; }
+        
+        /* Struktur form dua kolom ke samping */
+        form { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; }
+        
+        .form-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .form-row label.form-label {
+            width: 30%;
+            font-size: 14px;
+            font-weight: bold;
+            padding-top: 8px;
+        }
+        
+        .form-row .form-input {
+            width: 70%;
+        }
+
+        input[type="text"], input[type="password"], input[type="email"], input[type="tel"], select, textarea { 
+            padding: 8px; 
+            border: 1px solid #aaa; 
+            border-radius: 3px; 
+            width: 100%; 
+            box-sizing: border-box; 
+        }
+
+        /* Teks tombol file input */
+        input[type="file"] {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            width: 100%;
+        }
+        input[type="file"]::file-selector-button {
+            padding: 5px 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #888;
+            border-radius: 3px;
+            cursor: pointer;
+            color: #333;
+            margin-right: 10px;
+        }
+        input[type="file"]::file-selector-button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .btn-container { display: flex; justify-content: flex-start; gap: 10px; margin-top: 20px; padding-left: calc(30% + 15px); }
+        button, .btn { padding: 6px 20px; background-color: #f0f0f0; border: 1px solid #888; border-radius: 3px; cursor: pointer; text-decoration: none; color: #333; font-size: 14px; text-align: center; }
+        button:hover, .btn:hover { background-color: #e0e0e0; }
+        
+        footer { display: flex; justify-content: space-between; padding: 15px 30px; background-color: #fff; border-top: 1px solid #ddd; font-size: 12px; position: fixed; bottom: 0; width: 100%; box-sizing: border-box; }
+        .footer-links { display: flex; gap: 15px; }
+        .footer-links a { text-decoration: none; color: #333; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <div class="logo-box">X</div>
+            <span>Nama Website</span>
+        </div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="login.html">Login</a>
+            <a href="daftar.html">Daftar</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 style="text-align: center; margin-top: 0;">Dftar</h2>
+        <!-- Atribut action="login.html" membuat form berpindah ke halaman login ketika tombol daftar ditekan -->
+        <form action="login.html" method="GET">
+            <div class="form-row">
+                <label class="form-label">Username</label>
+                <div class="form-input"><input type="text" required></div>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Password</label>
+                <div class="form-input"><input type="password" required></div>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Ulangi Password</label>
+                <div class="form-input"><input type="password" required></div>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Nama Lengkap</label>
+                <div class="form-input"><input type="text" required></div>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Email</label>
+                <div class="form-input"><input type="email" required></div>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Alamat</label>
+                <div class="form-input"><textarea rows="2"></textarea></div>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Nomor Telepon</label>
+                <div class="form-input"><input type="tel"></div>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Jenis Kelamin</label>
+                <div class="form-input" style="display: flex; gap: 15px; padding-top: 8px;">
+                    <label><input type="radio" name="jk"> Laki-laki</label>
+                    <label><input type="radio" name="jk"> Perempuan</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Jurusan</label>
+                <div class="form-input">
+                    <select>
+                        <option value="">Pilih Jurusan</option>
+                        <option value="mi">Manajemen Informatika</option>
+                        <option value="ti">Teknik Informatika</option>
+                        <option value="si">Sistem Informasi</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <label class="form-label">Foto Profil</label>
+                <div class="form-input">
+                    <input type="file" lang="id">
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <button type="submit">Daftar</button>
+                <a href="index.html" class="btn">Kembali</a>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div>&copy; 2026 John Doe - 1122334455 - Kelas MI 25</div>
+        <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">Email</a>
+        </div>
+    </footer>
+
+</body>
+</html>
